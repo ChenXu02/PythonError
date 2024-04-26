@@ -1,2 +1,5 @@
-1) Error: PyCharm keeps displaying "Scanning installed package" when opening the project.
+1) ERROR: PyCharm keeps displaying "Scanning installed package" when opening the project.
    Solving: Open cmd, type the command: conda activate, then enter the command: conda list. After that, an error message will appear. Modify the error according to the information provided, and the original problem will be resolved.
+
+2）ERROR: Cannot uninstall 'PyYAML'. It is a distutils installed project and thus we cannot accurately determine which files belong to it which would lead to only a partial uninstall.
+   Solving: To revert the version of pip back to 8.11, distutils can be uninstalled.
