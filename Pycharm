@@ -1,0 +1,2 @@
+1) Error: PyCharm keeps displaying "Scanning installed package" when opening the project.
+   Solving: Open cmd, type the command: conda activate, then enter the command: conda list. After that, an error message will appear. Modify the error according to the information provided, and the original problem will be resolved.
