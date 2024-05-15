@@ -3,3 +3,7 @@
 
 2）ERROR: Cannot uninstall 'PyYAML'. It is a distutils installed project and thus we cannot accurately determine which files belong to it which would lead to only a partial uninstall.
    Solving: To revert the version of pip back to 8.11, distutils can be uninstalled.
+
+3) ERROR: Expected parameter covariance_matrix (Tensor of shape (128, 128)) of distribution MultivariateNormal(loc: torch.Size([128]), covariance_matrix: torch.Size([128, 128])) to satisfy the constraint PositiveDefinite(), but found invalid values:...
+   Solving: Although the covariance was constructed using a combination of matrix inner product and a positive-valued diagonal matrix, an error still occurred indicating that the matrix is not positive definite. This is primarily due to numerical stability issues and floating-point precision limitations during the inner product calculation. 
+   This error can be resolved by employing enforced symmetrization. C=(C+C.t())/2. This method will only remove the asymmetry caused by floating-point precision issues and will not have any other effects on the matrix.
